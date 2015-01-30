@@ -1,0 +1,29 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00keymap.rpy", line 290, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 296, in <module>
+    renpy.take_screenshot((config.thumbnail_width, config.thumbnail_height))
+AttributeError: 'Interface' object has no attribute 'fullscreen_video'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/00keymap.rpy", line 290, in script
+    python hide:
+  File "C:\Users\Kamil\Desktop\renpy-6.18.3-sdk\renpy\ast.py", line 785, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Kamil\Desktop\renpy-6.18.3-sdk\renpy\python.py", line 1382, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00keymap.rpy", line 296, in <module>
+    renpy.take_screenshot((config.thumbnail_width, config.thumbnail_height))
+  File "C:\Users\Kamil\Desktop\renpy-6.18.3-sdk\renpy\exports.py", line 1338, in take_screenshot
+    renpy.game.interface.take_screenshot(scale, background=background)
+  File "C:\Users\Kamil\Desktop\renpy-6.18.3-sdk\renpy\display\core.py", line 1712, in take_screenshot
+    surf = renpy.display.draw.screenshot(self.surftree, self.fullscreen_video)
+AttributeError: 'Interface' object has no attribute 'fullscreen_video'
+
+Windows-post2008Server-6.2.9200
+Ren'Py 6.18.3.761
+Project 0.1
